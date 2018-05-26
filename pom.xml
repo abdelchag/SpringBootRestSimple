@@ -7,6 +7,11 @@
     <groupId>fr.ing.paymentutils</groupId>
     <artifactId>paymentutils-project</artifactId>
     <version>1.0.0</version>
+    <modules>
+        <module>paymentutilswar</module>
+        <module>paymentutilsservices</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -15,11 +20,21 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <start-class>fr.ing.paymentutils.starters.PaymentUtilsStarter</start-class>
+    </properties>
+
     <dependencies>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
 
     </dependencies>
